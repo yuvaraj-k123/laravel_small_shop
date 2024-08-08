@@ -67,25 +67,18 @@ class DatabaseSeeder extends Seeder
 
         $products = [
             [
-                'brand_id' => 1
-            ],
-            [
-                'category_id' => 1
-            ],
-            [
-                'name' => 'hp'
-            ],
-            [
-                'description' => 'laptop'
-            ],
-            [
-                'qty' => 200
-            ],
-            [
+                'brand_id' => 1,
+                'category_id' => 1,
+                'name' => 'hp',
+                'description' => 'laptop',
+                'qty' => 200,
                 'alert_stock' => 20
-            ]
+            ],
         ];
 
-        product::insert($products);
+        foreach ($products as $row) {
+            Product::create($row);
+        }
+
     }
 }
