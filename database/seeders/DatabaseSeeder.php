@@ -48,13 +48,13 @@ class DatabaseSeeder extends Seeder
         
         $brands = [
             [
-                'name' => 'hp'
+                'name' => 'HP'
             ],
             [
-                'name' => 'dell'
+                'name' => 'DELL'
             ],
             [
-                'name' => 'intel'
+                'name' => 'Intel'
             ],
             [
                 'name' => 'acer'
