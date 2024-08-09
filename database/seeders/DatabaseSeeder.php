@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\Category;
 use App\Models\Brand;
 use App\Models\Product;
+use App\Models\Cart;
 
 class DatabaseSeeder extends Seeder
 {
@@ -78,6 +79,18 @@ class DatabaseSeeder extends Seeder
 
         foreach ($products as $row) {
             Product::create($row);
+        }
+
+        $carts = [
+            [
+                'customer_id' => 1,
+                'product_id' => 2,
+                'qty' => 100,
+            ],
+            ];
+
+        foreach ($carts as $row) {
+            Cart::create($row);
         }
 
     }
